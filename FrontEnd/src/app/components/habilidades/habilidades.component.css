@@ -1,0 +1,15 @@
+.habilidades{
+    background-color: #aaa;
+    border-top: 1px solid #000;
+    padding-bottom: 20px;
+}
+
+.titulo{
+    margin: 20px;
+}
+
+.grilla{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
