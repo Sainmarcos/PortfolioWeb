@@ -1,0 +1,123 @@
+*{
+    font-family: sans-serif;
+}
+
+.fondo{
+    height: 100vh;
+    width: 100vw;
+    background-color: #151515;
+}
+
+.login{
+    border: 2px solid #777;
+    width: 300px;
+    height: 600px;
+    border-radius: 20px;
+    background-color: #151515;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.texto{
+    cursor: context-menu;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.texto h2{
+    color: #eee;
+    font-size: 40px;
+}
+
+.texto p{
+    color: #777;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;    
+}
+
+.campoNombre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campoNombre p{
+    color: #777;
+    cursor: context-menu;
+}
+
+.mail{
+    margin-bottom: 20px;
+}
+
+.campo{
+    width: 150%;
+    height: 30px;
+    color: #bbb;
+    border-radius: 5px;
+    border: 2px solid #999;
+    /* background: linear-gradient(to top, #ccc, transparent);fondo de los input en degrade */
+    background: transparent;
+    /* outline: none;Le saco el borde q se le pone cuando selecciono el campo para escribir */
+    margin-bottom: 10px;
+}
+
+
+.botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton{
+    background: transparent;
+    border: 2px solid #999;
+    border-radius: 5px;
+    padding: 10px;
+    color: #777;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.boton:hover{
+    cursor: pointer;
+    background-color: #999;
+    color: #151515;
+}
+
+.boton:first-child{
+    margin-bottom: 10px;
+}
+
+.botones p{
+    margin-top: 15px;
+    color: #777;
+}
+
+.botones a{
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.botones a:visited{
+    color: #aaa;
+}
+
+.botones a:hover{
+    text-decoration: underline;
+}

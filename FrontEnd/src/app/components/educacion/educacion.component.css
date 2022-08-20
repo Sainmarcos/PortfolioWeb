@@ -1,7 +1,8 @@
 .sectionEdu{
-    background-color: #aaa;
-    border-top: 1px solid #000;
+    background-color: #151515;
     padding: 10px 0;
+    color: #eee;
+    font-family: sans-serif;
 }
 
 .encabezadoSeccion{
@@ -12,18 +13,58 @@
 }
 
 .btnMas{
-    height: 20px;
+    display: none;
+    background: transparent;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 3px;
+    color: #777;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.btnMas:hover{
     cursor: pointer;
+    background-color: #999;
+    color: #151515;
 }
 
 .div-educacion{
+    border: 2px solid #777;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px 0;
     display: flex;
     align-items: center;
 }
 
 .logo-edu{
-    min-width: 100px;
-    max-width: 300px;
+    /* min-width: 100px;
+    max-width: 300px; */
+    width: 25%;
     margin: 0 20px;
     
+}
+
+.educacion-individual-texto{
+    color: #777;
+}
+
+
+@media (max-width: 600px){
+    .div-educacion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .educacion-individual-texto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        /* border: 1px solid red; */
+        text-align: center;
+        margin: 5px 0;
+    }
 }
