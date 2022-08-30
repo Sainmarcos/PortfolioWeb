@@ -1,8 +1,10 @@
 .sectionExp{
-    background-color: #151515;
-    /* border-top: 1px solid #000; */
+    /* background-color: #151515; */
+    background-color: #000;
+    /* border-top: 1px solid #999; */
     padding: 10px 0;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
 
 .encabezadoSeccion{
@@ -10,58 +12,147 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 20px;
-    color: #eee;
+    color: rgb(219, 101, 55);
+    font-size: larger;
 }
 
-.btnMas{
-    display: none;
+.btn{
     background: transparent;
-    border: 1px solid #999;
+    border: 2px solid #999;
     border-radius: 5px;
-    padding: 3px;
+    padding: 4px;
     color: #777;
     font-size: 17px;
     font-weight: 700;
 }
 
-.btnMas:hover{
+.btn:hover{
     cursor: pointer;
     background-color: #999;
     color: #151515;
 }
 
+.tabla-experiencias{
+    color: #999;
+    /* table-layout: fixed; */
+    border-collapse: collapse;
+    border: 1px solid #777;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
 
-.div-experiencia{
-    margin: 10px;
-    border-radius: 5px;
+.titulo-columnas{
+    border-bottom: 2px solid #777;
+}
+
+.titulo{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.experiencia{
+    border-bottom: 1px solid #777;
+}
+
+.experiencia td:first-child{
+    width: 30%;
+}
+
+.experiencia td:nth-child(2){
+    width: 50%;
+    /* border: 1px solid red; */
+}
+.experiencia td:nth-child(3){
+    width: 10%;
+    /* border: 1px solid green; */
+}
+.experiencia td:nth-child(4){
+    width: 10%;
+    /* border: 1px solid blue; */
+}
+
+.campo{
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* PRUEBA TARJETAS */
+
+.tarjetas{
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-column-gap: 15px;
+    grid-row-gap: 30px;
+    justify-content: space-evenly;
+    color: #fff;
+    text-align: center;
+    margin: 0 20px;
+    margin-top: 10px;
+}
+
+.tarjeta{
+    /* border: 3px solid #777; */
+    padding: 10px;
+    /* border-radius: 10px; */
+    background-color: #333;
+    min-height: 250px;
     display: flex;
-    align-items: center;
-    border: 2px solid #777;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.logo-exp{
-    width: 25%;
-    margin: 0 20px 0 10px;
+.btn-tarjeta:first-child{
+    /* background-color: rgb(48, 248, 48); */
+    margin-right: 5px;
+    color: #fff;
+    font-weight: 500;
+    
+}
+.btn-tarjeta:nth-child(2){
+    margin-left: 5px;
+    color: #fff;
+    font-weight: 500;
+    /* background-color: rgb(196, 0, 0); */
 }
 
-.experiencia-individual-texto{
-    color: #777;
+
+/* PRUEBA LISTA */
+
+.tarjeta2{
+    margin: 10px 20px;
+    color: #fff;
+    /* border: 2px solid #777; */
+    border-bottom: 2px solid #777;
+    /* background: linear-gradient(to top, #222, transparent); */
+    /* border-radius: 5px; */
+    padding: 10px 10px 20px 10px;
+    display: flex;
 }
+
+.texto{
+    width: 90%;
+    /* border: 1px solid red; */
+}
+
+.titulo2{
+    margin-bottom: 10px;
+}
+
+.botones2{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    /* border: 1px solid green; */
+}
+
+.btn-tarjeta2:first-child{
+    margin-bottom: 10px;
+}
+
 
 @media (max-width: 600px){
-    .div-experiencia{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .experiencia-individual-texto{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* justify-content: center; */
-        /* border: 1px solid red; */
-        text-align: center;
-        margin-bottom: 5px;
-    }
+    
 }

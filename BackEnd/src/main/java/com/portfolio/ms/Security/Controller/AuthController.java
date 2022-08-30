@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -95,4 +95,11 @@ public class AuthController {
         
         return new ResponseEntity(jwtDto, HttpStatus.OK);
     }
+    /*
+    @GetMapping("/prueba")
+    public ResponseEntity<String> prueba(@RequestParam("nombre") String nombre){
+        Usuario resp = usuarioService.getByNombreUsuario(nombre).orElse(new Usuario("Error"));
+        return new ResponseEntity(resp.getNombre(), HttpStatus.OK);
+    }
+    */
 }

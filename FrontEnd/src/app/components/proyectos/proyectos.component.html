@@ -1,13 +1,19 @@
 <div class="proyectos">
     <div class="encabezado">
         <h2 class="titulo">Proyectos</h2>
-        <button class="btnMas" id="btn-agregar-experiencia">+</button>
+        <!-- <button class="btn" id=" btn btn-agregar-proyecto" routerLink="/nuevoProyecto" *ngIf="isLogged">Agregar</button> -->
     </div>
-    <div class="proyecto">
-        <h3 class="tituloProyecto">Portfolio Web</h3>
-        <h4 class="subTituloProyecto">Creacion de mi propio portfolio</h4>
-        <p class="descripcionProyecto">
-            Utilizando herramientas de programacion web tales como HTML, CSS y JavaScript para el FrontEnd y Java y MySql para el BackEnd cree este portfolio Web como proyecto del programa "Argentina Programa" #YoProgramo siendome útil a la hora de mostrar mi experiencia y educacion en la programación
-        </p>
-    </div>
+
+    <!-- <div class="tarjetas2">
+        <div class="tarjeta2" *ngFor="let Proyecto of proyecto">
+            <div class="texto">
+                <h2 class="titulo2">{{Proyecto.nombreP}}</h2>
+                <p class="descripcion2">{{Proyecto.descripcionP}}</p>
+            </div>
+            <div class="botones2">
+                <button *ngIf="isLogged" class="btn btn-tarjeta2" routerLink="/editEdu/{{Proyecto.id}}"> 🖊Editar </button>
+                <button *ngIf="isLogged" class="btn btn-tarjeta2" (click)="delete(Proyecto.id)"> 🗑Borrar </button>
+            </div>
+        </div>
+    </div> -->
 </div>

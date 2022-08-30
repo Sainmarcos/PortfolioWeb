@@ -1,11 +1,16 @@
 .habilidades{
-    background-color: #151515;
-    font-family: sans-serif;
+    background-color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.titulo{
-    color: #eee;
-    margin-left: 20px;
+.encabezado{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+    color: rgb(219, 101, 55);
+    font-size: larger;
+    /* border: 1px solid red; */
 }
 
 .grilla{

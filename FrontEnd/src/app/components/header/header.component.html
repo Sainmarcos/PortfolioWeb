@@ -22,7 +22,9 @@
                 </a>
             </div>            
             
-            <a href="/login" class="boton">Iniciar sesión</a>
+            <button type="button" class="boton" (click)="login()" *ngIf="!isLogged">Iniciar sesión</button>
+            <button type="button" class="boton" (click)="onLogOut()" *ngIf="isLogged">Cerrar sesión</button>
+            <!--<a href="/login" class="boton">Iniciar sesión</a>-->
         </div>
     </div>
     <div class="banner">

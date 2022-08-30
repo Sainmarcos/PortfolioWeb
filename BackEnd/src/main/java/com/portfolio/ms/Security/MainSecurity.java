@@ -21,7 +21,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-/**
+/*
 import com.portfolio.ms.Security.Service.UserDetailsImpl;
 import com.portfolio.ms.Security.jwt.JwtEntryPoint;
 import com.portfolio.ms.Security.jwt.JwtTokenFilter;
@@ -39,10 +39,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 */
-/**
- *
- * @author marco
- */
+
+
+
+
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -83,7 +83,7 @@ public class MainSecurity {
     }
 }
 
-/**
+/*        
 public class MainSecurity  extends WebSecurityConfigurerAdapter {
     @Autowired
     UserDetailsImpl userDetailsServiceImpl;
@@ -128,4 +128,4 @@ public class MainSecurity  extends WebSecurityConfigurerAdapter {
     
     
 }
-*/ 
+*/

@@ -1,35 +1,30 @@
 <section class="sectionEdu">
     <div class="encabezadoSeccion">
         <h2 class="titulo-section">Educacion</h2>
-        <button class="btnMas" id="btn-agregar-educacion">+</button>
+        <button class="btn" id=" btn btn-agregar-experiencia" routerLink="/nuevaEdu" *ngIf="isLogged">Agregar</button>
     </div>
-    <div class="div-educacion">
-        <img src="../../../assets/fich-unl.jpg" alt="fich-unl" class="logo-edu">
-        <div class="educacion-individual-texto">
-            <h4>Ingenieria en Informatica - UNL (En curso)</h4>
-            <p>Actualmente estudiando Ing en informatica en la Universidad Nacional del Litoral, en la Facultad de Ingenieria y Ciencias Hidricas.</p>
+    <!-- <div class="tarjetas">
+        <div *ngFor="let Educacion of educacion" class="tarjeta">
+            <h2 class="tituloExpe">{{Educacion.nombreE}}</h2>
+            <p class="descripcionExpe">{{Educacion.descripcionE}}</p>
+            <div class="botones-terjeta">
+                <button *ngIf="isLogged" class="btn btn-tarjeta" routerLink="/editExp/{{Educacion.id}}"> 🖊Editar </button>
+                <button *ngIf="isLogged" class="btn btn-tarjeta" (click)="delete(Educacion.id)"> 🗑Borrar </button>
+            </div>
         </div>
+    </div> -->
 
-        <!-- 
-        <div class="franja-info-oculta">
-            <div class="logo-franja-nuevo">
-                <input type="file" name="foto" class="foto-agregar">
+    <div class="tarjetas2">
+        <div class="tarjeta2" *ngFor="let Educacion of educacion">
+            <div class="texto">
+                <h2 class="titulo2">{{Educacion.nombreE}}</h2>
+                <!-- <h2 class="titulo2">{{Educacion.nombreE}}</h2> -->
+                <p class="descripcion2">{{Educacion.descripcionE}}</p>
             </div>
-            <div class="experiencia-individual-texto-nuevo">
-                <div class="label-input">
-                    <label >Titulo</label>
-                    <input type="text" placeholder="Titulo">
-                </div>
-                <div class="label-input">
-                    <label >Descripcion</label>
-                    <input type="text" placeholder="Descripcion">
-                </div>
-                <div class="botones">
-                    <button id="aceptar-exp">Aceptar</button>
-                    <button id="cancelar-exp">Cancelar</button>
-                </div>
+            <div class="botones2">
+                <button *ngIf="isLogged" class="btn btn-tarjeta2" routerLink="/editEdu/{{Educacion.id}}"> 🖊Editar </button>
+                <button *ngIf="isLogged" class="btn btn-tarjeta2" (click)="delete(Educacion.id)"> 🗑Borrar </button>
             </div>
         </div>
-         -->    
     </div>
 </section>

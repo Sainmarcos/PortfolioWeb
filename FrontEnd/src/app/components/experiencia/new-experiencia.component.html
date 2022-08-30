@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="todo">
+        <h2 class="titulo">Nueva experiencia laboral</h2>
+
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm" class="formulario">
+            <div class="tituloE campo">
+                <label for="nombreE">Titulo experiencia laboral.</label>
+                <textarea name="nombreE" id="nombreE" autocomplete="none" [(ngModel)]="nombreE" required></textarea>
+                <!-- <input type="text" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required> -->
+            </div>
+
+            <div class="descripcionE campo">
+                <label for="descripcionE">Describe la experiencia laboral</label>
+                <textarea name="descripcionE" id="descripcionE" autocomplete="none" [(ngModel)]="descripcionE" required></textarea>
+                <!-- <input type="text" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required> -->
+            </div>
+
+            <div class="botones">
+                <button type="submit" class="btn btn-agregar">Agregar</button>
+                <button type="button" class="btn btn-cancelar" routerLink="">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
