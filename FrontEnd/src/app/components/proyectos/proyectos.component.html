@@ -1,19 +1,19 @@
 <div class="proyectos">
     <div class="encabezado">
         <h2 class="titulo">Proyectos</h2>
-        <!-- <button class="btn" id=" btn btn-agregar-proyecto" routerLink="/nuevoProyecto" *ngIf="isLogged">Agregar</button> -->
+        <button class="btn" id=" btn btn-agregar-proyecto" routerLink="/nuevoProyecto" *ngIf="isLogged">Agregar</button>
     </div>
 
-    <!-- <div class="tarjetas2">
-        <div class="tarjeta2" *ngFor="let Proyecto of proyecto">
+    <div class="tarjetas2">
+        <div class="tarjeta2" *ngFor="let Proyecto of proyectos">
             <div class="texto">
                 <h2 class="titulo2">{{Proyecto.nombreP}}</h2>
                 <p class="descripcion2">{{Proyecto.descripcionP}}</p>
             </div>
             <div class="botones2">
-                <button *ngIf="isLogged" class="btn btn-tarjeta2" routerLink="/editEdu/{{Proyecto.id}}"> 🖊Editar </button>
+                <button *ngIf="isLogged" class="btn btn-tarjeta2" routerLink="/editProyectos/{{Proyecto.id}}"> 🖊Editar </button>
                 <button *ngIf="isLogged" class="btn btn-tarjeta2" (click)="delete(Proyecto.id)"> 🗑Borrar </button>
             </div>
         </div>
-    </div> -->
+    </div>
 </div>

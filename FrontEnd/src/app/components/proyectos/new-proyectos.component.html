@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="todo">
+        <h2 class="titulo">Nuevo Proyecto</h2>
+
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm" class="formulario">
+            <div class="tituloE campo">
+                <label for="nombreP">Nombre del proyecto.</label>
+                <textarea name="nombreP" id="nombreP" autocomplete="none" [(ngModel)]="nombreP" required></textarea>
+                <!-- <input type="text" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required> -->
+            </div>
+
+            <div class="descripcionE campo">
+                <label for="descripcionP">Describe el proyecto</label>
+                <textarea name="descripcionP" id="descripcionP" autocomplete="none" [(ngModel)]="descripcionP" required></textarea>
+                <!-- <input type="text" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required> -->
+            </div>
+
+            <div class="botones">
+                <button type="submit" class="btn btn-agregar">Agregar</button>
+                <button type="button" class="btn btn-cancelar" routerLink="">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -15,4 +15,8 @@ export class PersonaService {
   public getPersona(): Observable<persona>{//Observable es para hacer peticiones asincronas
     return this.http.get<persona>(this.URL + 'traer/perfil');
   }
+
+  public update(id:number , perfil: persona): Observable<any>{
+    return this.http.put<any>(this.URL + `editar/${id}`, perfil);
+  }
 }

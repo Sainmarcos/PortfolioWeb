@@ -6,6 +6,33 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.fotoPerfil{
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.btn-editar{
+    position: absolute;
+    bottom: -10px;
+    right: -30px;
+}
+
+.btn{
+    background: transparent;
+    border: 2px solid #999;
+    border-radius: 5px;
+    padding: 5px;
+    color: #777;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: #999;
+    color: #151515;
+}
+
 .fotoPerfil img{
     height: 18em;
     width: 18em;

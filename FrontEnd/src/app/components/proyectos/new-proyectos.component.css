@@ -7,7 +7,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 .todo{
     border: 2px solid #999;
     border-radius: 10px;
@@ -22,12 +21,10 @@
     align-items: center;
 }
 
-
 .titulo{
     margin: 10px 0 30px 0;
     text-decoration: underline;
 }
-
 
 .formulario{
     /* border: 1px solid blue; */
@@ -51,11 +48,11 @@
 
 .campo textarea{
     /* height: 300px; */
-    padding: 5px;
     resize: none;
     background: transparent;
     border: 2px solid #999;
     color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #descripcionE{

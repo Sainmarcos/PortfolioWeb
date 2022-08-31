@@ -4,6 +4,7 @@
     width: 100vw;
     color: #fff;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .todo{
@@ -51,7 +52,6 @@
     background: transparent;
     border: 2px solid #999;
     color: #fff;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #descripcionE{

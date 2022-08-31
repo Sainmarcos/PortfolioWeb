@@ -1,6 +1,6 @@
 .proyectos{
     background-color: #000;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
 }
@@ -14,46 +14,52 @@
     font-size: larger;
 }
 
-.proyecto{
-    border: 2px solid #777;
-    margin: 10px;
-    border-radius: 5px;
-    padding: 10px;
-}
 
-.tituloProyecto{
-    color: #eee;
-    font-size: 22px;
-    /* font-weight: 1000; */
-    /* margin: 5px 0; */
-}
-
-.subTituloProyecto{
-    color: #777;
-    font-size: 18px;
-    /* font-weight: 800; */
-    margin: 0;
-    margin-bottom: 5px;
-}
-
-.descripcionProyecto{
-    color: #777;
-    text-align: justify;
-}
-
-.btnMas{
-    display: none;
+.btn{
     background: transparent;
-    border: 1px solid #999;
+    border: 2px solid #999;
     border-radius: 5px;
-    padding: 3px;
+    padding: 5px;
     color: #777;
     font-size: 17px;
     font-weight: 700;
 }
 
-.btnMas:hover{
+.btn:hover{
     cursor: pointer;
     background-color: #999;
     color: #151515;
+}
+
+.tarjeta2{
+    margin: 10px 20px;
+    color: #fff;
+    /* border: 2px solid #777; */
+    border-bottom: 2px solid #777;
+    /* background: linear-gradient(to top, #222, transparent); */
+    /* border-radius: 5px; */
+    padding: 10px 10px 20px 10px;
+    display: flex;
+}
+
+.texto{
+    width: 90%;
+    /* border: 1px solid red; */
+}
+
+.titulo2{
+    margin-bottom: 10px;
+}
+
+.botones2{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    /* border: 1px solid green; */
+}
+
+.btn-tarjeta2:first-child{
+    margin-bottom: 10px;
 }
