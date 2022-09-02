@@ -23,7 +23,45 @@
     cursor: context-menu;
 }
 
-@media (max-width: 500px){
+.contenedor-grafico{
+    position: relative;
+    margin-top: 10px;
+    /* border: 1px solid red; */
+}
+
+.btn{
+    background: transparent;
+    border: 2px solid #999;
+    border-radius: 5px;
+    padding: 4px;
+    color: #777;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: #999;
+    color: #151515;
+}
+
+.editar{
+    position: absolute;
+    right: -30px;
+    height: 30px;
+    width: 30px;
+}
+
+.eliminar{
+    position: absolute;
+    top: 35px;
+    right: -30px;
+    height: 30px;
+    width: 30px;
+}
+
+
+@media (max-width: 600px){
     .grilla{
         grid-template-columns: 1fr 1fr;
     }

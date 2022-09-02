@@ -10,6 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class ExperienciaComponent implements OnInit {
   expe: Experiencia[] = [];
+  autorities: string[];
 
   constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService) { }
 
@@ -17,6 +18,7 @@ export class ExperienciaComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarExperiencia();
+    this.autorities = this.tokenService.getAuthorities();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     }else{
@@ -41,5 +43,15 @@ delete(id?: number){
     )
   }
 }
+
+isAdmin(): boolean{
+  let admin = false;
+  for(let i = 0; i<this.autorities.length; i++){
+    if(this.autorities[i]=="ROLE_ADMIN")
+    admin= true;
+  }
+  return admin;
+}
+
 }
 

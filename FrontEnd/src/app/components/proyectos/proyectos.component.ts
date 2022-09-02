@@ -10,6 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class ProyectosComponent implements OnInit {
   proyectos: Proyectos[] = [];
+  autorities: string[];
 
   constructor(private proyectosS: ProyectosService, private tokenService: TokenService) { }
 
@@ -17,6 +18,7 @@ export class ProyectosComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarProyectos();
+    this.autorities = this.tokenService.getAuthorities();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     }else{
@@ -43,4 +45,14 @@ export class ProyectosComponent implements OnInit {
       )
     }
   }
+
+  isAdmin(): boolean{
+    let admin = false;
+    for(let i = 0; i<this.autorities.length; i++){
+      if(this.autorities[i]=="ROLE_ADMIN")
+      admin= true;
+    }
+    return admin;
+  }
+
 }

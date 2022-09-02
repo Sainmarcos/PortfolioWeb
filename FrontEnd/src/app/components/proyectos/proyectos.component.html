@@ -1,7 +1,7 @@
 <div class="proyectos">
     <div class="encabezado">
         <h2 class="titulo">Proyectos</h2>
-        <button class="btn" id=" btn btn-agregar-proyecto" routerLink="/nuevoProyecto" *ngIf="isLogged">Agregar</button>
+        <button class="btn" id=" btn btn-agregar-proyecto" routerLink="/nuevoProyecto" *ngIf="isLogged && isAdmin()">Agregar</button>
     </div>
 
     <div class="tarjetas2">
@@ -11,8 +11,8 @@
                 <p class="descripcion2">{{Proyecto.descripcionP}}</p>
             </div>
             <div class="botones2">
-                <button *ngIf="isLogged" class="btn btn-tarjeta2" routerLink="/editProyectos/{{Proyecto.id}}"> 🖊Editar </button>
-                <button *ngIf="isLogged" class="btn btn-tarjeta2" (click)="delete(Proyecto.id)"> 🗑Borrar </button>
+                <button *ngIf="isLogged && isAdmin()" class="btn btn-tarjeta2" routerLink="/editProyectos/{{Proyecto.id}}"> <i class="fa-solid fa-pen"></i> Editar </button>
+                <button *ngIf="isLogged && isAdmin()" class="btn btn-tarjeta2" (click)="delete(Proyecto.id)"> <i class="fa-solid fa-trash"></i> Borrar </button>
             </div>
         </div>
     </div>

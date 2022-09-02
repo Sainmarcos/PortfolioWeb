@@ -10,6 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class EducacionComponent implements OnInit {
   educacion: Educacion[] = [];
+  autorities: string[];
 
   constructor(private educacionS : EducacionService, private tokenService: TokenService) { }
 
@@ -17,6 +18,7 @@ export class EducacionComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarEducacion();
+    this.autorities = this.tokenService.getAuthorities();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     }else{
@@ -43,5 +45,15 @@ export class EducacionComponent implements OnInit {
       )
     }
   }
+
+  isAdmin(): boolean{
+    let admin = false;
+    for(let i = 0; i<this.autorities.length; i++){
+      if(this.autorities[i]=="ROLE_ADMIN")
+      admin= true;
+    }
+    return admin;
+  }
+
 
 }

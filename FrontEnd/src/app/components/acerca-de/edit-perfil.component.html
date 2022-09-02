@@ -5,22 +5,26 @@
         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="formulario">
             <div class="tituloE campo">
                 <label for="nombre">Nombre</label>
-                <textarea name="nombre" id="nombre" autocomplete="none" [(ngModel)]="perfil.nombre" required></textarea>
+                <!-- <textarea name="nombre" id="nombre" autocomplete="none" [(ngModel)]="perfil.nombre" required></textarea> -->
+                <input name="nombre" id="nombre" autocomplete="none" [(ngModel)]="perfil.nombre" required>
             </div>
 
             <div class="tituloE campo">
                 <label for="apellido">Apellido</label>
-                <textarea name="apellido" id="apellido" autocomplete="none" [(ngModel)]="perfil.apellido" required></textarea>
+                <!-- <textarea name="apellido" id="apellido" autocomplete="none" [(ngModel)]="perfil.apellido" required></textarea> -->
+                <input name="apellido" id="apellido" autocomplete="none" [(ngModel)]="perfil.apellido" required>
             </div>
 
             <div class="tituloE campo">
                 <label for="tituloP">Titulo Profesional</label>
-                <textarea name="tituloP" id="tituloP" autocomplete="none" [(ngModel)]="perfil.tituloProf" required></textarea>
+                <!-- <textarea name="tituloP" id="tituloP" autocomplete="none" [(ngModel)]="perfil.tituloProf" required></textarea> -->
+                <input name="tituloP" id="tituloP" autocomplete="none" [(ngModel)]="perfil.tituloProf" required>
             </div>
             
             <div class="descripcionE campo">
                 <label for="descripcion">Descripcion</label>
                 <textarea name="descripcion" id="descripcion" autocomplete="none" [(ngModel)]="perfil.descripcion" required></textarea>
+                <!-- <input name="descripcion" id="descripcion" autocomplete="none" [(ngModel)]="perfil.descripcion" required> -->
             </div>
 
             <div class="botones">
