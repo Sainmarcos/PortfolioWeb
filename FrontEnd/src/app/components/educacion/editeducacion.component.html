@@ -5,8 +5,8 @@
         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="formulario">
             <div class="tituloE campo">
                 <label for="nombreE">Titulo Institucion.</label>
-                <textarea name="nombreE" id="nombreE" autocomplete="none" [(ngModel)]="educacion.nombreE" required></textarea>
-                <!-- <input type="text" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required> -->
+                <!-- <textarea name="nombreE" id="nombreE" autocomplete="none" [(ngModel)]="educacion.nombreE" required></textarea> -->
+                <input type="text" id="nombreE" name="nombreE" [(ngModel)]="educacion.nombreE" required>
             </div>
 
             <div class="descripcionE campo">

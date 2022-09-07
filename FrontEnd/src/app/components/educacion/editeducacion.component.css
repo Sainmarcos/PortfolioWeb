@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .container{
     background-color: #151515;
     height: 100vh;
@@ -48,14 +53,13 @@
     font-size: larger;
 }
 
-.campo textarea{
+.campo textarea, input{
     /* height: 300px; */
     padding: 5px;
     resize: none;
     background: transparent;
     border: 2px solid #999;
     color: #fff;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #descripcionE{

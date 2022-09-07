@@ -23,7 +23,7 @@ export class ExperienciaComponent implements OnInit {
       this.isLogged = true;
     }else{
       this.isLogged = false;
-    }
+    }  
   }
 
   

@@ -124,3 +124,17 @@
 .botones a:hover{
     text-decoration: underline;
 }
+
+@media (max-width: 600px){
+    .texto h2{
+        font-size: 30px;
+    }
+
+    .texto p{
+        font-size: 15px;
+    }
+
+    /* .login{
+        border: none;
+    } */
+}

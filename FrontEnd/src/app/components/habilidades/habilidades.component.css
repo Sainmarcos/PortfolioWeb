@@ -8,25 +8,31 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 20px;
-    color: rgb(219, 101, 55);
+    color: #db6537;
     font-size: larger;
     /* border: 1px solid red; */
 }
 
 .grilla{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
 }
 
 .grafico{
     cursor: context-menu;
+    /* border: 1px solid red; */
 }
 
 .contenedor-grafico{
     position: relative;
-    margin-top: 10px;
-    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    width: 200px;
+    height: 200px;
+    /* border: 1px solid blue; */
 }
 
 .btn{
@@ -47,23 +53,23 @@
 
 .editar{
     position: absolute;
-    right: -30px;
+    right: 5px;
+    top: 5px;
     height: 30px;
     width: 30px;
 }
 
 .eliminar{
     position: absolute;
-    top: 35px;
-    right: -30px;
+    top: 40px;
+    right: 5px;
     height: 30px;
     width: 30px;
 }
 
-
-@media (max-width: 600px){
+@media (max-width: 400px){
     .grilla{
-        grid-template-columns: 1fr 1fr;
+        justify-content: center;
     }
 }
 

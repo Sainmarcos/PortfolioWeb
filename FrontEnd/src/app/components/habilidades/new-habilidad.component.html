@@ -5,14 +5,14 @@
         <form (ngSubmit)="onCreate()" novalidate #f="ngForm" class="formulario">
             <div class="tituloE campo">
                 <label for="nombreH">Nombre de la habilidad</label>
-                <textarea name="nombreH" id="nombreH" autocomplete="none" [(ngModel)]="nombreH" required></textarea>
-                <!-- <input type="text" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required> -->
+                <!-- <textarea name="nombreH" id="nombreH" autocomplete="none" [(ngModel)]="nombreH" required></textarea> -->
+                <input type="text" id="nombreE" name="nombreE" [(ngModel)]="nombreH" required>
             </div>
 
             <div class="descripcionE campo">
                 <label for="porcentajeH">Porcentaje de conocimiento de la habilidad</label>
-                <textarea name="porcentajeH" id="porcentajeH" autocomplete="none" [(ngModel)]="porcentajeH" required></textarea>
-                <!-- <input type="text" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required> -->
+                <!-- <textarea name="porcentajeH" id="porcentajeH" autocomplete="none" [(ngModel)]="porcentajeH" required></textarea> -->
+                <input type="number" id="porcentajeH" name="porcentajeH" [(ngModel)]="porcentajeH" required>
             </div>
 
             <div class="botones">

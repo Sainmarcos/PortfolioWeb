@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .container{
     background-color: #151515;
     height: 100vh;
@@ -13,13 +17,12 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    width: 300px;
+    /* width: 300px; */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     align-items: center;
-    /* border: 1px solid green; */
     /* width: 90%; */
 }
 
@@ -32,51 +35,70 @@
 
 .formulario{
     /* border: 1px solid blue; */
-    width: 90%;
+    /* width: 90%; */
 }
 
-.campo{
+.campos{
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 15px;
-    /* border: 1px solid red; */
-}
-
-.campo:first-child{
-    margin-bottom: 20px;
-}
-
-.campo label{
-    margin-bottom: 10px;
-    font-size: larger;
     /* border: 1px solid blue; */
 }
 
-.campo textarea, input{
-    /* height: 300px; */
-    padding: 5px;
+.primeros{
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    width: 200px;
+    /* border: 1px solid red; */
+}
+
+.primeros .campo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    /* border: 1px solid red; */
+}
+
+.segundo{
+    margin-left: 15px;
+    /* border: 1px solid green; */
+}
+
+.segundo .campo{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid yellow; */
+    height: 100%;
+}
+
+#descripcion{
+    height: 100%;
+    width: 300px;
     resize: none;
+}
+
+.campo label{
+    margin-bottom: 7px;
+}
+
+.campo textarea, input{
+    padding: 5px;
     background: transparent;
     border: 2px solid #999;
     color: #fff;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* #descripcionE{
-    height: 100px;
-} */
-
-#descripcion{
-    height: 10em;
-    
+label{
+    font-size: 1.2em;
 }
-
 
 .botones{
     margin-top: 40px;
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
 }
@@ -100,3 +122,22 @@
     background-color: #999;
     color: #151515;
 }
+
+
+@media (max-width: 600px) {
+    .campos{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .primeros{
+        margin: 0;
+    }
+
+    .segundo{
+        margin: 0;
+        height: 200px;
+        /* border: 1px solid red; */
+    }
+} 

@@ -18,15 +18,19 @@ export class NewHabilidadComponent implements OnInit {
   }
 
   onCreate(): void{
-    const habilidad = new Habilidades(this.nombreH, this.porcentajeH);
-    this.sHabilidades.save(habilidad).subscribe(
-      data=>{
-        this.router.navigate(['']);
-      }, err=>{
-        alert("Error al añadir la habilidad");
-        this.router.navigate(['']);
-      }
-    )
+    if(this.porcentajeH < 0 || this.porcentajeH > 100){
+      alert("El porcentaje debe estar entre 0 y 100");
+    }else{
+      const habilidad = new Habilidades(this.nombreH, this.porcentajeH);
+      this.sHabilidades.save(habilidad).subscribe(
+        data=>{
+          this.router.navigate(['']);
+        }, err=>{
+          alert("Error al añadir la habilidad");
+          this.router.navigate(['']);
+        }
+      )
+    }
   }
 
 }

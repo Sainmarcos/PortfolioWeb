@@ -26,15 +26,19 @@ export class EditHabilidadComponent implements OnInit {
   }
 
   onUpdate(): void{
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.sHabilidades.update(id, this.habilidad).subscribe(
-      data=>{
-        this.router.navigate(['']);
-      },err=>{
-        alert("Error al modificar la habilidad");
-        this.router.navigate(['']);
-      }
-    )
+    if(this.habilidad.porcentajeH <0 || this.habilidad.porcentajeH > 100){
+      alert("El porcentaje debe estar entre 0 y 100");
+    }else{
+      const id = this.activatedRouter.snapshot.params['id'];
+      this.sHabilidades.update(id, this.habilidad).subscribe(
+        data=>{
+          this.router.navigate(['']);
+        },err=>{
+          alert("Error al modificar la habilidad");
+          this.router.navigate(['']);
+        }
+      )
+    }
   }
 
 }

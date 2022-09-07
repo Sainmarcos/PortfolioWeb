@@ -12,3 +12,9 @@ footer{
 .nombre{
     margin-bottom: 10px;
 }
+
+@media (max-width: 600px){
+    p{
+        font-size: 13px;
+    }
+}

@@ -38,7 +38,7 @@ public class CHabilidades {
         return new ResponseEntity(list, HttpStatus.OK);
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoHabilidades dtohabilidades){
         if(StringUtils.isBlank(dtohabilidades.getNombreH()))
@@ -55,7 +55,7 @@ public class CHabilidades {
         
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoHabilidades dtoH){
         if(!sHabilidades.existsById(id))
@@ -75,7 +75,7 @@ public class CHabilidades {
         return new ResponseEntity(new Mensaje("Habilidad actualizada con exito"), HttpStatus.OK);
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id){
         if(!sHabilidades.existsById(id))
@@ -85,7 +85,7 @@ public class CHabilidades {
         return new ResponseEntity(new Mensaje("Habilidad eliminada con exito"), HttpStatus.OK);
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/detail/{id}")
     public ResponseEntity<Habilidades> getById(@PathVariable("id") int id){
         if(!sHabilidades.existsById(id))
