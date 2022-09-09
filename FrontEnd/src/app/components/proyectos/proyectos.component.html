@@ -1,18 +1,23 @@
 <div class="proyectos">
-    <div class="encabezado">
-        <h2 class="titulo">Proyectos</h2>
-        <button class="btn" id=" btn btn-agregar-proyecto" routerLink="/nuevoProyecto" *ngIf="isLogged && isAdmin()">Agregar</button>
+    <div class="imagen">
+        <img src="../../../assets/proyecto.png" alt="">
     </div>
-
-    <div class="tarjetas2">
-        <div class="tarjeta2" *ngFor="let Proyecto of proyectos">
-            <div class="texto">
-                <h2 class="titulo2">{{Proyecto.nombreP}}</h2>
-                <p class="descripcion2">{{Proyecto.descripcionP}}</p>
-            </div>
-            <div class="botones2">
-                <button *ngIf="isLogged && isAdmin()" class="btn btn-tarjeta2" routerLink="/editProyectos/{{Proyecto.id}}"> <i class="fa-solid fa-pen"></i> Editar </button>
-                <button *ngIf="isLogged && isAdmin()" class="btn btn-tarjeta2" (click)="delete(Proyecto.id)"> <i class="fa-solid fa-trash"></i> Borrar </button>
+    <div class="lista">
+        <div class="encabezado">
+            <h2 class="titulo">Proyectos</h2>
+            <button class="btn" id=" btn btn-agregar-proyecto" routerLink="/nuevoProyecto" *ngIf="isLogged && isAdmin()">Agregar</button>
+        </div>
+    
+        <div class="tarjetas2">
+            <div class="tarjeta2" *ngFor="let Proyecto of proyectos">
+                <div class="texto">
+                    <h2 class="titulo2">{{Proyecto.nombreP}}</h2>
+                    <p class="descripcion2">{{Proyecto.descripcionP}}</p>
+                </div>
+                <div class="botones2">
+                    <button *ngIf="isLogged && isAdmin()" class="btn btn-tarjeta2" routerLink="/editProyectos/{{Proyecto.id}}"> <i class="ri-pencil-line"></i> <br> Editar </button>
+                    <button *ngIf="isLogged && isAdmin()" class="btn btn-tarjeta2" (click)="delete(Proyecto.id)"> <i class="ri-delete-bin-6-line"></i> <br> Borrar </button>
+                </div>
             </div>
         </div>
     </div>

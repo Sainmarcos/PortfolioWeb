@@ -1,30 +1,61 @@
-.habilidades{
-    background-color: #000;
+* {
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.encabezado{
+.habilidades {
+    padding: 10px 0;
+    display: flex;
+}
+
+.lista{
+    width: 80%;
+}
+
+.imagen{
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+.imagen img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    object-fit: cover;
+    object-position: -200px;
+}
+
+.encabezado {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 20px;
-    color: #db6537;
+    padding-bottom: 10px;
+    color: #184362;
     font-size: larger;
-    /* border: 1px solid red; */
+    border-bottom: 4px solid #184362;    
 }
 
-.grilla{
+.titulo {
+    margin-bottom: 10px;
+}
+
+.grilla {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    
     /* border: 1px solid red; */
 }
 
-.grafico{
+.grafico {
     cursor: context-menu;
     /* border: 1px solid red; */
 }
 
-.contenedor-grafico{
+.contenedor-grafico {
     position: relative;
     display: flex;
     justify-content: center;
@@ -32,44 +63,64 @@
     margin: 10px 20px;
     width: 200px;
     height: 200px;
+    background-color: #DEEDF7;
+    border-radius: 0 30px;
     /* border: 1px solid blue; */
+
+    box-shadow: 5px 14px 16px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 14px 16px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 14px 16px 0px rgba(0, 0, 0, 0.75);
 }
 
-.btn{
+.btn {
     background: transparent;
-    border: 2px solid #999;
+    border: 3px solid #5DA3D6;
     border-radius: 5px;
     padding: 4px;
-    color: #777;
+    color: #5DA3D6;
     font-size: 17px;
     font-weight: 700;
 }
 
-.btn:hover{
+.btn:hover {
     cursor: pointer;
-    background-color: #999;
-    color: #151515;
+    background-color: #5DA3D6;
+    color: #ffffff;
 }
 
-.editar{
+.editar {
     position: absolute;
-    right: 5px;
+    left: 5px;
     top: 5px;
     height: 30px;
     width: 30px;
 }
 
-.eliminar{
+.eliminar {
     position: absolute;
     top: 40px;
-    right: 5px;
+    left: 5px;
     height: 30px;
     width: 30px;
 }
 
-@media (max-width: 400px){
-    .grilla{
+@media (max-width: 600px) {
+    .grilla {
         justify-content: center;
+        align-items: center;
+    }
+
+    .imagen{
+        display: none;
+    }
+
+    .lista{
+        width: 100%;
     }
 }
 
+@media (max-width: 800px){
+    .imagen img{
+        object-position: -700px;
+    }
+}

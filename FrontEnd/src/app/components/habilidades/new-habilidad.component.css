@@ -4,30 +4,32 @@
 }
 
 .container{
-    background-color: #151515;
+    background-image: linear-gradient(to bottom,#184362,#DEEDF7);
     height: 100vh;
     width: 100vw;
-    color: #fff;
-    box-sizing: border-box;
 }
 
 .todo{
-    border: 2px solid #999;
+    border: 1px solid #000;
+    width: 400px;
     border-radius: 10px;
+    background-color: #fff;
     padding: 20px;
+
     display: flex;
     flex-direction: column;
-    width: 400px;
+    align-items: center;
+    
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    align-items: center;
 }
 
 .titulo{
+    cursor: context-menu;
     margin: 10px 0 30px 0;
-    text-decoration: underline;
+    text-decoration: underline #184362;
 }
 
 .formulario{
@@ -47,48 +49,68 @@
 
 .campo label{
     margin-bottom: 10px;
-    font-size: larger;
+    font-size: large;
 }
 
-.campo textarea, input{
-    /* height: 300px; */
-    resize: none;
+.campo textarea{
     padding: 5px;
     background: transparent;
-    border: 2px solid #999;
-    color: #fff;
+    border: 2px solid #184362;
+    color: #000;
+    font-weight: 500;
+    resize: none;
 }
 
-#descripcionE{
-    height: 100px;
+.campo input{
+    border: none;
+    border-bottom: 2px solid #184362;
+    background: transparent;
+    margin-bottom: 10px;
+    outline: none;
+    color: #000;
+    font-weight: 500;
+    font-size: medium;
+    padding-left: 5px;
+}
+
+
+#porcentajeH{
+    width: 15%;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.input-porcentaje{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
 }
 
 
 .botones{
     margin-top: 40px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 .btn-agregar{
-    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 .btn{
     background: transparent;
-    border: 2px solid #999;
+    border: 2px solid #184362;
     border-radius: 5px;
     padding: 10px;
-    color: #777;
+    color: #184362;
     font-size: 17px;
     font-weight: 700;
 }
 
 .btn:hover{
     cursor: pointer;
-    background-color: #999;
-    color: #151515;
+    background-color: #184362;
+    color: #fff;
 }
 
 input[type=number]::-webkit-inner-spin-button, 

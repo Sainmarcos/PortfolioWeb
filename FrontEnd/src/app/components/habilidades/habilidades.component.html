@@ -1,29 +1,34 @@
 <div class="habilidades">
-    <div class="encabezado">
-        <h2 class="titulo">Habilidades</h2>
-        <button class="btn agregar" routerLink="/nuevaHabilidad" *ngIf="isLogged && isAdmin()">Agregar</button>
-    </div>
-    <div class="grilla">
-        <div class="contenedor-grafico" *ngFor="let Habilidad of habilidades">
-            
-            <circle-progress
-                [percent]="Habilidad.porcentajeH"
-                [radius]="60"
-                [title]="Habilidad.nombreH"
-                [showTitle]="true"
-                [showUnits]="false"
-                [showSubtitle]="false"
-                [outerStrokeWidth]="8"
-                [innerStrokeWidth]="4"
-                [titleColor]="'#fff'"
-                [outerStrokeColor]="'#2bda1c'"
-                [innerStrokeColor]="'#eee'"
-                [animation]="true"
-                [animationDuration]="300"
-                class="grafico"
-            ></circle-progress>
-            <button class="btn editar" routerLink="/editarHabilidad/{{Habilidad.id}}" *ngIf="isLogged && isAdmin()"><i class="fa-solid fa-pen"></i></button>
-            <button class="btn eliminar" (click)="delete(Habilidad.id)" *ngIf="isLogged && isAdmin()"><i class="fa-solid fa-trash"></i></button>
+    <div class="lista">
+        <div class="encabezado">
+            <h2 class="titulo">Habilidades</h2>
+            <button class="btn agregar" routerLink="/nuevaHabilidad" *ngIf="isLogged && isAdmin()">Agregar</button>
         </div>
+        <div class="grilla">
+            <div class="contenedor-grafico" *ngFor="let Habilidad of habilidades">
+                
+                <circle-progress
+                    [percent]="Habilidad.porcentajeH"
+                    [radius]="60"
+                    [title]="Habilidad.nombreH"
+                    [showTitle]="true"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [outerStrokeWidth]="8"
+                    [innerStrokeWidth]="4"
+                    [titleColor]="'#000'"
+                    [outerStrokeColor]="'#2D7BB4'"
+                    [innerStrokeColor]="'#000'"
+                    [animation]="true"
+                    [animationDuration]="300"
+                    class="grafico"
+                ></circle-progress>
+                <button class="btn editar" routerLink="/editarHabilidad/{{Habilidad.id}}" *ngIf="isLogged && isAdmin()"><i class="ri-pencil-line"></i></button>
+                <button class="btn eliminar" (click)="delete(Habilidad.id)" *ngIf="isLogged && isAdmin()"><i class="ri-delete-bin-6-line"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="imagen">
+        <img src="../../../assets/habilidades.jpg" alt="">
     </div>
 </div>

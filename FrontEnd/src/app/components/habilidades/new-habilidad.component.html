@@ -12,7 +12,10 @@
             <div class="descripcionE campo">
                 <label for="porcentajeH">Porcentaje de conocimiento de la habilidad</label>
                 <!-- <textarea name="porcentajeH" id="porcentajeH" autocomplete="none" [(ngModel)]="porcentajeH" required></textarea> -->
-                <input type="number" id="porcentajeH" name="porcentajeH" [(ngModel)]="porcentajeH" required>
+                <div class="input-porcentaje">
+                    <input type="number" id="porcentajeH" name="porcentajeH" [(ngModel)]="porcentajeH" required>
+                    <p class="%">%</p>
+                </div>
             </div>
 
             <div class="botones">

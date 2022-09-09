@@ -2,7 +2,7 @@
     <div class="login">
         <div class="texto">
             <h2>Iniciar sesion</h2>
-            <p>Ingrese mail y contraseña</p>
+            <p>Ingrese usuario y contraseña</p>
         </div>
 
         <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
@@ -10,7 +10,7 @@
             <div class="inputs">
                 <div class="campoNombre mail">
                     <!-- <label for="mail">Mail</label> -->
-                    <input type="text" name="nombreUsuario" id="nombreUsuario" class="campo" [(ngModel)]="nombreUsuario" required>
+                    <input type="text" autocomplete="none" spellcheck="false" name="nombreUsuario" id="nombreUsuario" class="campo" [(ngModel)]="nombreUsuario" required>
                     <p class="titulo">Usuario</p>
                 </div>
 

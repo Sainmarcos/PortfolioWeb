@@ -1,19 +1,24 @@
 <section class="sectionExp">
-    <div class="encabezadoSeccion">
-        <h2 class="titulo-section">Experiencias laborales</h2>
-        <button class="btn" id="btn-agregar-experiencia" routerLink="/nuevaExp" *ngIf="isLogged && isAdmin()">Agregar</button>
-    </div>
-    <div class="tarjetas2">
-        <div class="tarjeta2" *ngFor="let Experiencia of expe">
-            <div class="texto">
-                <h2 class="titulo2">{{Experiencia.nombreE}}</h2>
-                <p class="descripcion2">{{Experiencia.descripcionE}}</p>
-            </div>
-            <div class="botones2">
-                <button *ngIf="isLogged && isAdmin()" class="btn btn-tarjeta2" routerLink="/editExp/{{Experiencia.id}}"> <i class="fa-solid fa-pen"></i> Editar </button>
-                <button *ngIf="isLogged && isAdmin()" class="btn btn-tarjeta2" (click)="delete(Experiencia.id)"> <i class="fa-solid fa-trash"></i> Borrar </button>
+    <div class="lista">
+        <div class="encabezadoSeccion">
+            <h2 class="titulo-section">Experiencias laborales</h2>
+            <button class="btn" id="btn-agregar-experiencia" routerLink="/nuevaExp" *ngIf="isLogged && isAdmin()">Agregar</button>
+        </div>
+        <div class="tarjetas2">
+            <div class="tarjeta2" *ngFor="let Experiencia of expe">
+                <div class="texto">
+                    <h2 class="titulo2">{{Experiencia.nombreE}}</h2>
+                    <p class="descripcion2">{{Experiencia.descripcionE}}</p>
+                </div>
+                <div class="botones2">
+                    <button *ngIf="isLogged && isAdmin()" class="btn btn-tarjeta2" routerLink="/editExp/{{Experiencia.id}}"> <i class="ri-pencil-line"></i> <br> Editar </button>
+                    <button *ngIf="isLogged && isAdmin()" class="btn btn-tarjeta2" (click)="delete(Experiencia.id)"> <i class="ri-delete-bin-6-line"></i> <br> Borrar </button>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="imagen">
+        <img src="../../../assets/trabajo.jpg" alt="">
     </div>
 
 </section>

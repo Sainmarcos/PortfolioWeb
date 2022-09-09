@@ -3,39 +3,32 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .container{
-    background-color: #151515;
+    background-image: linear-gradient(to bottom,#184362,#DEEDF7);
     height: 100vh;
     width: 100vw;
-    color: #fff;
-    box-sizing: border-box;
 }
 
 
 .todo{
-    border: 2px solid #999;
+    border: 1px solid #000;
     border-radius: 10px;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    /* width: 300px; */
+    background-color: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     align-items: center;
-    /* width: 90%; */
 }
 
 
 .titulo{
     margin: 0px 0 20px 0;
-    text-decoration: underline;
-}
-
-
-.formulario{
-    /* border: 1px solid blue; */
-    /* width: 90%; */
+    font-size: 2em;
+    /* text-decoration: underline; */
+    cursor: context-menu;
 }
 
 .campos{
@@ -83,13 +76,28 @@
 
 .campo label{
     margin-bottom: 7px;
+    font-size: large;
 }
 
-.campo textarea, input{
+.campo textarea{
     padding: 5px;
     background: transparent;
-    border: 2px solid #999;
-    color: #fff;
+    border: 2px solid #184362;
+    color: #000;
+    font-weight: 500;
+    resize: none;
+}
+
+.campo input{
+    border: none;
+    border-bottom: 2px solid #184362;
+    background: transparent;
+    margin-bottom: 10px;
+    outline: none;
+    color: #000;
+    font-weight: 500;
+    font-size: medium;
+    padding-left: 5px;
 }
 
 label{
@@ -109,18 +117,18 @@ label{
 
 .btn{
     background: transparent;
-    border: 2px solid #999;
+    border: 2px solid #184362;
     border-radius: 5px;
     padding: 10px;
-    color: #777;
+    color: #184362;
     font-size: 17px;
     font-weight: 700;
 }
 
 .btn:hover{
     cursor: pointer;
-    background-color: #999;
-    color: #151515;
+    background-color: #184362;
+    color: #fff;
 }
 
 

@@ -1,18 +1,23 @@
 <section class="sectionEdu">
-    <div class="encabezadoSeccion">
-        <h2 class="titulo-section">Educacion</h2>
-        <button class="btn" id=" btn btn-agregar-experiencia" routerLink="/nuevaEdu" *ngIf="isLogged && isAdmin()">Agregar</button>
+    <div class="imagen">
+        <img src="../../../assets/educacion.jpg" alt="">
     </div>
-    <div class="tarjetas2">
-        <div class="tarjeta2" *ngFor="let Educacion of educacion">
-            <div class="texto">
-                <h2 class="titulo2">{{Educacion.nombreE}}</h2>
-                <!-- <h2 class="titulo2">{{Educacion.nombreE}}</h2> -->
-                <p class="descripcion2">{{Educacion.descripcionE}}</p>
-            </div>
-            <div class="botones2">
-                <button *ngIf="isLogged && isAdmin()" class="btn btn-tarjeta2" routerLink="/editEdu/{{Educacion.id}}"> <i class="fa-solid fa-pen"></i> Editar </button>
-                <button *ngIf="isLogged && isAdmin()" class="btn btn-tarjeta2" (click)="delete(Educacion.id)"> <i class="fa-solid fa-trash"></i> Borrar </button>
+    <div class="lista">
+        <div class="encabezadoSeccion">
+            <h2 class="titulo-section">Educacion</h2>
+            <button class="btn" id=" btn btn-agregar-experiencia" routerLink="/nuevaEdu" *ngIf="isLogged && isAdmin()">Agregar</button>
+        </div>
+        <div class="tarjetas2">
+            <div class="tarjeta2" *ngFor="let Educacion of educacion">
+                <div class="texto">
+                    <h2 class="titulo2">{{Educacion.nombreE}}</h2>
+                    <!-- <h2 class="titulo2">{{Educacion.nombreE}}</h2> -->
+                    <p class="descripcion2">{{Educacion.descripcionE}}</p>
+                </div>
+                <div class="botones2">
+                    <button *ngIf="isLogged && isAdmin()" class="btn btn-tarjeta2" routerLink="/editEdu/{{Educacion.id}}"> <i class="ri-pencil-line"></i> <br> Editar </button>
+                    <button *ngIf="isLogged && isAdmin()" class="btn btn-tarjeta2" (click)="delete(Educacion.id)"> <i class="ri-delete-bin-6-line"></i> <br> Borrar </button>
+                </div>
             </div>
         </div>
     </div>

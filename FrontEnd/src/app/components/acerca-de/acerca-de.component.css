@@ -1,82 +1,103 @@
-.acercaDe{
-    /* background-color: #151515; */
-    background-color: #000;
-    display: flex;
-    padding-bottom: 20px;
+* {
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.fotoPerfil{
-    position: relative;
+.acercaDe {
+    background-color: #ffffff;
+    display: flex;
+    padding-bottom: 20px;
     /* border: 1px solid red; */
 }
 
-.btn-editar{
+.fotoPerfil {
+    position: relative;
+
+}
+
+.btn-editar {
     position: absolute;
     bottom: -5px;
     right: -35px;
 }
 
-.btn{
+.btn {
     background: transparent;
-    border: 2px solid #999;
+    border: 3px solid #5DA3D6;
     border-radius: 5px;
     padding: 5px;
-    color: #777;
+    color: #5DA3D6;
     font-size: 17px;
     font-weight: 700;
 }
 
-.btn:hover{
+.btn:hover {
     cursor: pointer;
-    background-color: #999;
-    color: #151515;
+    background-color: #5DA3D6;
+    color: #ffffff;
 }
 
-.fotoPerfil img{
+.fotoPerfil img {
     height: 18em;
     width: 18em;
     border-radius: 9em;
     object-fit: cover;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     margin-top: -70px;
-    border: 2px solid #eee;
+    border: 2px solid #5DA3D6;
     z-index: 10;
 }
 
-.FotoInfo{
+.FotoInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #fff;
+    color: #000;
     margin-right: 20px;
+    padding-left: 20px;
+    /* border: 1px solid green; */
 }
 
-.profesion, .nombre{
+.profesion,
+.nombre {
     text-align: center;
 }
 
-.profesion{
+.profesion {
     font-weight: 400;
 }
 
-.acerca-de-texto{
+.acerca-de-texto {
     font-size: 20px;
-    color: #fff;
+    color: #000;
     padding: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* border: 1px solid blue; */
+}
+
+.acerca-de-texto p {
+    /* border: 1px solid black; */
+    padding: 10px;
+    background-color: #DEEDF7;
 }
 
 @media (max-width: 600px) {
-    .acercaDe{
+    .acercaDe {
         display: flex;
         flex-direction: column;
     }
 
-    .acerca-de-texto{
+    .acerca-de-texto {
         text-align: justify;
         font-size: 15px;
+    }
+
+    .fotoPerfil img {
+        height: 16em;
+        width: 16em;
+        border-radius: 8em;
+        margin-top: -60px;
     }
 }

@@ -1,16 +1,22 @@
 footer{
-    background-color: #000;
+    background-color: #2D7BB4;
+    /* background-image: linear-gradient(to top, #2D7BB4, #5DA3D6, #fff); */
+
     margin: 0;
     padding: 30px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #777;
+    color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .nombre{
     margin-bottom: 10px;
+}
+
+p{
+    font-weight: 400;
 }
 
 @media (max-width: 600px){
